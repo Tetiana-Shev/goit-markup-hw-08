@@ -8,7 +8,6 @@
         flex-direction: column;
         @include font(12px, 500, 1.17, 0.02em);}
     @include desktop {
-        
         flex-direction: row;
         @include font(14px, 500, 1.14, 0.02em);}
 }
@@ -76,13 +75,9 @@
 .footer__contact__item {
     @include mobile {
         margin-bottom: 9px;
-        // &:not(:last-child) {margin-bottom: 0;}
         &--address {
             margin-bottom: 9px;
         }
-    }
-    @include desktop {
-        // text-align: left;
     }
 }
 .mobile__contact {
