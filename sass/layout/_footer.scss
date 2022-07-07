@@ -51,12 +51,10 @@
             text-align: start;
             align-items: flex-start;
         }
-    
     }
 
 .subscribe {
     @include mobile {
-        
         text-align: center;
     }
     @include tablet {
@@ -77,12 +75,10 @@
         color: $color-white;}
         @include tablet {
             text-align: center;
-            // align-items: center;
         }
         @include desktop {
             display: flex;
             text-align: start;
-            // align-items: flex-start;
         }
     }
 
@@ -94,8 +90,6 @@
     }
     @include desktop {
             display: flex;
-            
-        // flex-direction: row;
     }
     &__thumb {
         @include mobile {
@@ -114,8 +108,6 @@
         padding-top: 15px;
         padding-left: 16px;
         @include font(16px, 400, 1.25, 0.03em);
-        // display: flex;
-        // align-items: center;
         color: $color-footer-contact;}
     &__input {
         @include mobile {
@@ -128,8 +120,6 @@
             margin-right: 12px;
         }
         height: 50px;
-        // padding-left: 79px;
-        // margin-right: 12px;
         outline: none;
         border: 1px solid rgba(255, 255, 255, 0.3);
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -143,12 +133,11 @@
             border-color: $color-accent;}}
     &__button {
         @include mobile {
-        display: inline-flex;
+            display: inline-flex;
         }
         @include tablet {
             max-width: 200px;
         }
-        // display: flex;
         justify-content: center;
         padding: 10px ;
     }
