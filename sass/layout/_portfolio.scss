@@ -1,0 +1,80 @@
+.portfolio {
+    gap: 30px;
+    @include tablet {
+        display: flex;
+        flex-wrap: wrap;}
+}
+
+.portfolio a {
+    text-decoration: none;}
+
+.portfolio__item {
+    margin-bottom: 30px;
+    @include mobile {
+        &:nth-child(n + 9) {
+            margin-bottom: 0;}}
+    @include tablet {
+        width: calc((100% - 30px) / 2);
+        margin-bottom: 0;}
+    @include desktop {
+        width: calc((100% - 60px) / 3);}
+    }
+    
+
+.portfolio__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: box-shadow 250ms $timing-function;
+    &:hover, 
+    &:focus {
+        display: block;
+        box-shadow: inset $box-shadow;}}
+
+.portfolio__image {
+    position: relative;
+    overflow: hidden;}
+
+.portfolio__pic {
+    @extend %img;}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $bgc-overlay;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 250ms $timing-function, opacity 250ms $timing-function;
+    &:hover {
+        opacity: 1;}
+    &__text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 63px 24px;
+        width: 100%;
+        height: 100%;
+        font-size: 18px;
+        line-height: 1.56;
+        color: $color-white;}
+    .portfolio__link:hover &, 
+    .portfolio__link:focus & {
+        transform: translateY(0);
+        opacity: 1;}}
+
+.portfolio-content {
+    flex-grow: 1;
+    padding: 20px 24px;
+    border: 1px solid #EEEEEE;
+    &__title {
+        margin-top: 0;
+        margin-bottom: 4px;
+        color: $color-secondary;
+        @include font(18px, 700, 2, 0.06em);}
+    &__text {
+        color: $color-primary;
+        @include font(16px, null, 1.88, null);}}

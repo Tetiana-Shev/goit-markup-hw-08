@@ -1,0 +1,28 @@
+.logo {
+    font-family: Raleway, sans-serif;
+    text-decoration: none;
+    color: $color-accent;
+    @include mobile {
+        @include font(24px, 700, 1.17, 0.03em);    
+    }
+
+    @include desktop {
+        @include font(26px, null, 1.19, 0.03em);
+    }
+}
+
+.header__logo {
+    color: $color-black;}
+
+.logo-set {
+    @include mobile {
+    margin-bottom: 20px;
+    text-align: center;
+    }
+    @include desktop {
+        text-align: left;
+    }
+}
+
+.footer__logo {
+    color: $color-white;}

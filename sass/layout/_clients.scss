@@ -1,0 +1,37 @@
+.clients-set {
+    gap: 30px;
+    @include mobile {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.clients-set__item {
+    @include mobile {
+        width: calc((100% - 30px) / 2);
+    }
+    @include tablet {
+        width: calc((100% - 60px) / 3);
+    }
+    @include desktop {
+        width: calc((100% - 150px) / 6);
+    }
+    &:last-child {margin-right: 0;}
+}
+
+.clients-set__link {
+    display: flex;
+    padding: 16px 32px;
+    height: 92px;
+    border: 1px solid $color-network;
+    border-radius: 4px;
+    fill: $color-network;
+    transition: fill 250ms $timing-function, border-color 250ms $timing-function;
+    &:hover {
+        fill: $color-accent;
+        border-color: $color-accent;}
+    @include mobile {
+        display: block;
+        padding: 16px 52px;}
+    }

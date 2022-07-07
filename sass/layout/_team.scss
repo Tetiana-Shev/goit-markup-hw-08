@@ -1,0 +1,48 @@
+.team {
+    gap: 30px;
+    background-color: $bgc-section;} 
+
+.team-set {
+    @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;}
+    &__item {
+        margin-bottom: 30px;
+        background: $bgc-body;
+        box-shadow: $box-shadow;
+        border-radius: 0px 0px 4px 4px;
+        @include mobile {
+            &:nth-child(n + 4) {
+            margin-bottom: 0;}}
+        @include tablet {
+            margin-bottom: 0;
+            width: calc((100% - 30px) / 2);}
+        @include desktop {
+        width: calc((100% - 90px) / 4);}
+    }
+    &__img {
+        @extend %img;}}
+
+.team-card {
+    padding-top: 30px;
+    padding-bottom: 24px;
+    box-shadow: $box-shadow;
+    @include desktop {
+        padding-bottom: 30px;
+    }
+    
+    &__name {
+        margin-top: 0;
+        margin-bottom: 10px;
+        color: $color-secondary;
+        @include font(16px, 500, 1.19, 0.03em);
+        text-align: center;}
+    &__profession {
+        text-align: center;
+        @include font(16px, null, 1.19, 0.03em);
+        margin-bottom: 16px;}
+}
+
+
+

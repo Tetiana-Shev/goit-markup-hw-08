@@ -1,0 +1,83 @@
+.overlay {
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(
+        to right, 
+        $color-gradient, 
+        $color-gradient),
+        url(../images/hero-mob.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @include retina {
+        background-image: linear-gradient(
+        to right, 
+        $color-gradient, 
+        $color-gradient),
+        url(../images/hero-mob-2x.jpg);}
+    
+    @include tablet {
+        height: 400px;
+        background-image: linear-gradient(
+        to right, 
+        $color-gradient, 
+        $color-gradient),
+        url(../images/hero-tab.jpg);
+        @include retina {
+            background-image: linear-gradient(
+            to right, 
+            $color-gradient, 
+            $color-gradient),
+            url(../images/hero-tab-2x.jpg);
+        }
+    }
+
+    @include desktop {
+        max-width: 1600px;
+        height: 600px;
+        background-image: linear-gradient(
+        to right, 
+        $color-gradient, 
+        $color-gradient),
+        url(../images/hero.jpg);
+        @include retina {
+            background-image: linear-gradient(
+            to right, 
+            $color-gradient, 
+            $color-gradient),
+            url(../images/hero-2x.jpg);
+        }
+    }
+    }
+
+.hero {
+    display: block;
+    text-align: center;
+    padding-top: 118px;
+    padding-bottom: 118px;
+    background-color: $bgc-hero;
+    
+    @include desktop {
+        padding-top: 200px;
+        padding-bottom: 200px;}
+    }
+
+.hero-thumb {
+    margin: 0 auto;
+    text-align: center;}
+
+.hero-thumb__title {
+    display: inline-block;
+    width: 360px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: $color-white;
+    @include font(26px, 900, 1.62, 0.06em);
+    text-transform: uppercase;
+    
+    @include desktop {
+        display: inline-block;
+        @include font(44px, null, 1.36, null);
+        width: 696px;}
+    }

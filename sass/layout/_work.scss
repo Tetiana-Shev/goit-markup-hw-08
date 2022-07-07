@@ -1,0 +1,30 @@
+.work {
+    padding-top: 0;
+    @media screen and (max-width: 1119px) {
+        display: none;
+    } 
+    }
+
+.work-set {
+    display: flex;
+    &__item {
+        position: relative;
+        margin-right: 30px;}
+    &__item:last-child {
+        margin-right: 0px;}
+    &__img {
+        @extend %img;}
+    &__title {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        margin: 0;
+        padding-top: 27px;
+        padding-bottom: 27px;
+        @include font(null, 700, 1.14, 0.03em);
+        text-align: center;
+        text-transform: uppercase;
+        background-color: $color-section-work;
+        color:$color-white;}
+}

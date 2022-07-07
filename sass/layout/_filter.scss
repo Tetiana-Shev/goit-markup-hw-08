@@ -1,0 +1,53 @@
+.filter {
+    @include mobile {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+    @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    @include desktop {
+        margin-bottom: 50px;
+    }
+}
+
+.filter__item {
+    margin-right: 8px;
+    &:last-child {margin-right: 0;}
+    @include mobile {
+        margin-bottom: 15px;
+        &:nth-child(n + 4) {
+            margin-bottom: 0;
+        }
+    @include tablet {
+        margin-bottom: 0;
+    }
+    }
+}
+
+.filter__button {
+    padding: 6px 22px;
+    margin-bottom: 0;
+    border-radius: 4px;
+    border: transparent;
+    color: $color-secondary;
+    @include font(16px, 500, 1.62, 0.03em);
+    text-align: center;
+    cursor: pointer;
+    transition: color 250ms $timing-function,
+                background-color 250ms $timing-function,
+                box-shadow 250ms $timing-function;
+    &:hover,
+    &:focus {
+        color: $color-white;
+        background-color: $color-accent;
+        box-shadow: $box-shadow;}
+    &--current {
+        color: $color-white;
+        background-color: $color-accent;
+        box-shadow: $box-shadow;}
+}
