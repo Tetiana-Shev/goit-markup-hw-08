@@ -34,7 +34,8 @@
 
 .clients-set__link {
     display: flex;
-    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
     height: 92px;
     border: 1px solid $color-network;
     border-radius: 4px;
@@ -43,7 +44,4 @@
     &:hover {
         fill: $color-accent;
         border-color: $color-accent;}
-    @include mobile {
-        display: block;
-        padding: 16px 52px;}
     }

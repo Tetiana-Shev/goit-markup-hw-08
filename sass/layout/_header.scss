@@ -1,7 +1,5 @@
 .header {
     position: relative;
-    padding-top: 16px;
-    padding-bottom: 16px;
     border-bottom: 1px solid $color-border-bottom;
     @include tablet {
         padding-top: 0px;
@@ -10,6 +8,7 @@
 }
 
 .header-nav {
+    position: relative;
     display: flex;
     align-items: center;
 }
@@ -53,4 +52,7 @@
         height: 4px;
         background: $color-accent;
         border-radius: 2px;}
+    @include desktop {
+        padding-top: 32px;
+    }
 }

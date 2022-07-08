@@ -75,6 +75,7 @@ body {
 }
 
 .logo {
+  padding: 16px 0;
   font-family: Raleway, sans-serif;
   text-decoration: none;
   color: #2196F3;
@@ -154,10 +155,7 @@ body {
   height: 100vh;
   z-index: 9;
   background-color: #FFFFFF;
-  width: 100vw;
-  height: 796px;
-  padding-top: 48px;
-  padding-bottom: 48px;
+  padding: 48px 40px;
   opacity: 0;
   pointer-events: none;
   transform: translateY(-100%);
@@ -179,6 +177,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
   height: 100%;
   overflow-y: auto;
 }
@@ -193,7 +192,6 @@ body {
 }
 
 .mobile-menu__link {
-  padding-left: 40px;
   font-size: 40px;
   font-weight: 500;
   line-height: 1.18;
@@ -210,7 +208,6 @@ body {
 
 .mobile-network {
   display: flex;
-  justify-content: center;
 }
 .mobile-network__item:not(:last-child) {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
@@ -236,8 +233,6 @@ body {
   .header__contact {
     display: flex;
     flex-direction: column;
-    padding-top: 21px;
-    padding-bottom: 21px;
     font-size: 12px;
     font-weight: 500;
     line-height: 1.17;
@@ -274,6 +269,24 @@ body {
 .contact__link:hover, .contact__link:focus {
   color: #2196F3;
   fill: #2196F3;
+}
+.contact__link--email {
+  padding-top: 21px;
+}
+@media screen and (min-width: 1200px) {
+  .contact__link--email {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+.contact__link--tel {
+  padding-bottom: 21px;
+}
+@media screen and (min-width: 1200px) {
+  .contact__link--tel {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -331,7 +344,6 @@ body {
 }
 
 .mobile__contact {
-  padding-left: 40px;
   margin-bottom: 64px;
 }
 .mobile__contact__item {
@@ -660,8 +672,6 @@ body {
 
 .header {
   position: relative;
-  padding-top: 16px;
-  padding-bottom: 16px;
   border-bottom: 1px solid #ECECEC;
 }
 @media screen and (min-width: 768px) {
@@ -672,6 +682,7 @@ body {
 }
 
 .header-nav {
+  position: relative;
   display: flex;
   align-items: center;
 }
@@ -731,6 +742,11 @@ body {
   height: 4px;
   background: #2196F3;
   border-radius: 2px;
+}
+@media screen and (min-width: 1200px) {
+  .site-nav__link {
+    padding-top: 32px;
+  }
 }
 
 .overlay {
@@ -1034,7 +1050,8 @@ body {
 
 .clients-set__link {
   display: flex;
-  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
   height: 92px;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
@@ -1044,12 +1061,6 @@ body {
 .clients-set__link:hover {
   fill: #2196F3;
   border-color: #2196F3;
-}
-@media screen and (min-width: 480px) {
-  .clients-set__link {
-    display: block;
-    padding: 16px 52px;
-  }
 }
 
 .footer {
@@ -1067,10 +1078,14 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .footer__blocks {
+    text-align: center;
     justify-content: normal;
   }
 }
 
+.footer-address {
+  text-align: center;
+}
 @media screen and (min-width: 768px) {
   .footer-address {
     flex-direction: column;
@@ -1089,14 +1104,12 @@ body {
 }
 @media screen and (min-width: 480px) {
   .social {
-    margin-bottom: 60px;
     text-align: center;
   }
 }
 @media screen and (min-width: 768px) {
   .social {
     margin-left: 165px;
-    margin-bottom: 60px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1139,6 +1152,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .subscribe {
+    text-align: start;
     margin-left: 93px;
     padding-top: 12px;
   }
@@ -1166,6 +1180,18 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
+  .subscription_thumb {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscription__thumb {
+    display: flex;
+    text-align: start;
+  }
+}
+@media screen and (min-width: 1200px) {
   .subscription {
     display: flex;
   }
@@ -1173,6 +1199,11 @@ body {
 .subscription__label {
   text-align: center;
   width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  .subscription__label {
+    width: 0;
+  }
 }
 .subscription__label--text {
   position: absolute;
@@ -1233,6 +1264,15 @@ body {
   display: flex;
   content: "";
   margin-left: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    justify-content: center;
+  }
 }
 
 .filter {

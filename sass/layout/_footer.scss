@@ -10,11 +10,14 @@
         align-items: baseline;
     }
     @include desktop {
+        text-align: center;
         justify-content: normal;}
     }
     }
 
 .footer-address {
+
+    text-align: center;
     @include tablet {
         flex-direction: column;
         text-align: center;
@@ -26,11 +29,9 @@
 .social {
     margin-bottom: 60px;
     @include mobile {
-        margin-bottom: 60px;
         text-align: center;}
     @include tablet {
         margin-left: 165px;
-        margin-bottom: 60px;
     }
     @include desktop {
         margin-left: 70px;
@@ -57,6 +58,7 @@
         display: flex;
         flex-direction: column;}
     @include desktop {
+        text-align: start;
         margin-left: 93px;
         padding-top: 12px;}
 
@@ -76,30 +78,28 @@
         }
     }
 
+.subscription_thumb {
+    @include desktop {
+        display: flex;
+    }
+}
 .subscription {
-    @include tablet {
-        // display: flex;
-        // flex-direction: column;
-    
+    &__thumb {
+        @include desktop {
+            display: flex;
+            text-align: start;
+        }
     }
     @include desktop {
-            display: flex;
+        display: flex;
     }
-    &__thumb {
-        @include mobile {
-            
-        }
-        @include tablet {
-            // display: block;
-        }
-        @include desktop {
-            // display: flex;
-        }
-            }
+
     &__label {
         text-align: center;
         width: 100%;
-        // padding: 15px 16px;
+        @include desktop {
+            width: 0;
+        }
     }
     &__label--text {
         position: absolute;
@@ -111,10 +111,6 @@
         width: 100%;
         margin-bottom: 20px;
         padding: 15px 16px;
-        @include mobile {
-            
-            
-        }
         @include tablet {
             width: 450px;
         }
@@ -151,4 +147,12 @@
         display: flex;
         content: '';
         margin-left: 10px;}
+}
+.footer-container {
+    @include desktop {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: baseline;
+        justify-content: center;
+    }
 }

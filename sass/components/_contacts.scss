@@ -4,8 +4,6 @@
     @include tablet {
         display: flex;
         flex-direction: column;
-        padding-top: 21px;
-        padding-bottom: 21px;
         @include font(12px, 500, 1.17, 0.02em);}
     @include desktop {
         flex-direction: row;
@@ -32,6 +30,20 @@
     &:focus {
         color: $color-accent;
         fill: $color-accent;}
+    &--email {
+        padding-top: 21px;
+        @include desktop {
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
+    }
+    &--tel {
+        padding-bottom: 21px;
+        @include desktop {
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
+    }
 }
 
 .contact__icon {
@@ -80,7 +92,6 @@
     }
 }
 .mobile__contact {
-    padding-left: 40px;
     margin-bottom: 64px;
     &__item {
         margin-bottom: 32px;
