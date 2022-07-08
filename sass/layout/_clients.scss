@@ -1,4 +1,16 @@
+.clients {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include desktop {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+}
+
 .clients-set {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
     @include mobile {
         display: flex;

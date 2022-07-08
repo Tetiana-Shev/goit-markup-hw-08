@@ -1,6 +1,13 @@
 .team {
+    padding-top: 60px;
+    padding-bottom: 60px;
     gap: 30px;
-    background-color: $bgc-section;} 
+    background-color: $bgc-section;
+    @include desktop {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+} 
 
 .team-set {
     @include tablet {

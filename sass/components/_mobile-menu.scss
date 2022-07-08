@@ -1,4 +1,7 @@
 .menu-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
     display: block;
     margin-left: auto;
     border: none;
@@ -8,11 +11,9 @@
     &:focus {
         fill: $color-accent;
     }
-    
     @include tablet {
         display: none;
     }
-    
 }
 
 .mobile-menu {
@@ -33,9 +34,13 @@
     opacity: 0;
     pointer-events: none;
     transform: translateY(-100%);
-    transition: opacity 250ms $timing-function, visibility 250ms $timing-function, transform 250ms $timing-function;
+    transition: opacity 250ms $timing-function, 
+    visibility 250ms $timing-function, 
+    transform 250ms $timing-function;
     & .menu-button {
         position: absolute;
+        top: 10px;
+        right: 15px;
     }
     &.is-open {
         display: block;

@@ -69,13 +69,16 @@
 
 .hero-thumb__title {
     display: inline-block;
-    width: 360px;
+    
     margin-top: 0;
     margin-bottom: 30px;
     color: $color-white;
     @include font(26px, 900, 1.62, 0.06em);
     text-transform: uppercase;
     
+    // @include tablet {
+    //     width: 360px;
+    // }
     @include desktop {
         display: inline-block;
         @include font(44px, null, 1.36, null);

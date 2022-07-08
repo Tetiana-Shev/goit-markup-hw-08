@@ -1,34 +1,44 @@
+.benefits {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include desktop {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+}
+
 .benefits-set {
     @include tablet {
         display: flex;
         flex-wrap: wrap;
         gap: 30px;}
     &__item {
+        &:not(:last-child) {
+            margin-bottom: 30px;}
         @include mobile {
-            &:not(:last-child) {
-            margin-bottom: 30px;}}
+            }
         @include tablet {
-            width: calc((100% - 30px) / 2);}
+            width: calc((100% - 30px) / 2);
+            &:not(:last-child) {
+            margin-bottom: 0px;}
+        }
         @include desktop {
         width: calc((100% - 90px) / 4);}
     }
 }
 
 .benefits-card {
-    @include mobile {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 120px;
-        margin-bottom: 30px;
-        background: $bgc-section;
-        border-radius: 4px;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    margin-bottom: 30px;
+    background: $bgc-section;
+    border-radius: 4px;
     @include tablet {
         display: flex;
         align-items: center;
         justify-content: center;}
-    
     &__icon {
         display: block;
         content: '';
@@ -37,11 +47,12 @@
     &__title {
         margin-top: 0;
         margin-bottom: 10px;
+        text-align: center;
         color: $color-secondary;
         @include font(null, 700, 1.14, 0.03em);
         text-transform: uppercase;
         @include mobile {
-            text-align: center;
+            
         }
         @include tablet {
             text-align: start;
