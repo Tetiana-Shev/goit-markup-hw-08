@@ -24,12 +24,13 @@
 }
     
 .social {
+    margin-bottom: 60px;
     @include mobile {
         margin-bottom: 60px;
         text-align: center;}
     @include tablet {
         margin-left: 165px;
-        margin-bottom: 0;
+        margin-bottom: 60px;
     }
     @include desktop {
         margin-left: 70px;

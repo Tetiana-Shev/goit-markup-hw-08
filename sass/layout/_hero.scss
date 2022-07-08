@@ -75,10 +75,6 @@
     color: $color-white;
     @include font(26px, 900, 1.62, 0.06em);
     text-transform: uppercase;
-    
-    // @include tablet {
-    //     width: 360px;
-    // }
     @include desktop {
         display: inline-block;
         @include font(44px, null, 1.36, null);
