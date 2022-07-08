@@ -47,7 +47,7 @@
             
             <button 
             type="button" 
-            class="menu-button is-open"
+            class="menu-button js-open-menu"
             aria-expanded="false"
             aria-controls="mobile-menu"
             data-menu-button>
@@ -56,62 +56,9 @@
                 height="40"
                 aria-label="Переключатель мобильного меню"
                 >
-                    <use class="icon-close" href="./images/icons.svg#close"></use>
-                    <use class="icon-menu" href="./images/icons.svg#menu"></use>
+                    <use class="icon-close" href="./images/icons.svg#menu"></use>
                 </svg>
             </button>
-        
-
-        
-
-        <div class="mobile-menu-set" id="mobile-menu" data-menu>
-            <div class="container">
-
-            <div class="mob-menu-top">
-                
-                <ul class="mobile-menu list">
-                    <li class="mobile-menu__item">
-                        <a href="./index.html" class="mobile-menu__link mobile-menu__link--current">Студия</a>
-                    </li>
-                    <li class="mobile-menu__item">
-                        <a href="./portfolio.html" rel="noopener nofollow noreferrer" class="mobile-menu__link">Портфолио</a>
-                    </li>
-                    <li class="mobile-menu__item"><a href="" class="mobile-menu__link">Контакты</a></li>
-                </ul>
-
-            </div>
-            
-            <div class="mob-menu-bottom">
-                <ul class="contact mobile__contact list">
-                    <li class="contact__item mobile__contact__item">
-                        <a href="tel:+380961111111" class="contact__link mobile__contact__link--tel">
-                        +38 096 111 11 11</a>
-                    </li>
-                
-                    <li class="contact__item mobile__contact__item">
-                        <a href="mailto:info@devstudio.com" class="contact__link mobile__contact__link--email">
-                        info@devstudio.com</a>
-                    </li>
-                </ul>
-
-                <ul class="mobile-network list">
-                    <li class="mobile-network__item">
-                        <a class="mobile-network__link" href="./index.html">Instagram</a>
-                    </li>
-                    <li class="mobile-network__item">
-                        <a class="mobile-network__link" href="./index.html">Twitter</a>
-                    </li>
-                    <li class="mobile-network__item">
-                        <a class="mobile-network__link" href="./index.html">Facebook</a>
-                    </li>
-                    <li class="mobile-network__item">
-                        <a class="mobile-network__link" href="./index.html">LinkedIn</a>
-                    </li>
-                </ul>
-            </div>
-            </div>
-        </div>
-
         </nav>
     </header>
         
@@ -619,6 +566,69 @@
             </div>
         </div>
     </footer>
+
+    <div class="mobile-menu-set js-menu-container" id="mobile-menu">
+            <div class="container">
+
+            <button 
+            type="button" 
+            class="menu-button js-close-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            data-menu-button>
+                <svg 
+                width="40" 
+                height="40"
+                aria-label="Переключатель мобильного меню"
+                >
+                    <use class="icon-close" href="./images/icons.svg#close"></use>
+                </svg>
+            </button>
+
+            <div class="mob-menu-top">
+                
+                <ul class="mobile-menu list">
+                    <li class="mobile-menu__item">
+                        <a href="./index.html" class="mobile-menu__link mobile-menu__link--current">Студия</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a href="./portfolio.html" rel="noopener nofollow noreferrer" class="mobile-menu__link">Портфолио</a>
+                    </li>
+                    <li class="mobile-menu__item"><a href="" class="mobile-menu__link">Контакты</a></li>
+                </ul>
+
+            </div>
+            
+            <div class="mob-menu-bottom">
+                <ul class="contact mobile__contact list">
+                    <li class="contact__item mobile__contact__item">
+                        <a href="tel:+380961111111" class="contact__link mobile__contact__link--tel">
+                        +38 096 111 11 11</a>
+                    </li>
+                
+                    <li class="contact__item mobile__contact__item">
+                        <a href="mailto:info@devstudio.com" class="contact__link mobile__contact__link--email">
+                        info@devstudio.com</a>
+                    </li>
+                </ul>
+
+                <ul class="mobile-network list">
+                    <li class="mobile-network__item">
+                        <a class="mobile-network__link" href="./index.html">Instagram</a>
+                    </li>
+                    <li class="mobile-network__item">
+                        <a class="mobile-network__link" href="./index.html">Twitter</a>
+                    </li>
+                    <li class="mobile-network__item">
+                        <a class="mobile-network__link" href="./index.html">Facebook</a>
+                    </li>
+                    <li class="mobile-network__item">
+                        <a class="mobile-network__link" href="./index.html">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </div>
 
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">

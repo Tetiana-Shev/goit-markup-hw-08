@@ -6,37 +6,43 @@
     fill: $color-black;
     &:hover,
     &:focus {
-        fill: $color-accent;}
-    & .icon-close {
-    display: none;}
-    &.is-open .icon-close {
-    display: block;}
-    &.is-open .icon-menu {
-    display: none;}
-    @include tablet {display: none;}
+        fill: $color-accent;
+    }
+    
+    @include tablet {
+        display: none;
+    }
+    
 }
 
 .mobile-menu {
     @include tablet {display: none;}
 }
 .mobile-menu-set {
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 0;
     left: 0;
-    width: 100%;
-    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9;
     background-color: $bgc-body;
     width: 100vw;
     height: 796px;
     padding-top: 48px;
     padding-bottom: 48px;
     opacity: 0;
-    transition: opacity 250ms $timing-function, visibility 250ms $timing-function;
+    pointer-events: none;
+    transform: translateY(-100%);
+    transition: opacity 250ms $timing-function, visibility 250ms $timing-function, transform 250ms $timing-function;
+    & .menu-button {
+        position: absolute;
+    }
     &.is-open {
         display: block;
         opacity: 1;
         visibility: visible;
         pointer-events: initial;
+        transform: translateY(0);
         }
     & .container {
         display: flex;

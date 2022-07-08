@@ -6,6 +6,8 @@
     @include tablet {
         display: flex;
         flex-direction: column;
+        padding-top: 21px;
+        padding-bottom: 21px;
         @include font(12px, 500, 1.17, 0.02em);}
     @include desktop {
         flex-direction: row;
@@ -14,7 +16,8 @@
 
 .header__contact__item {
     @include tablet {
-        &:not(:last-child) {margin-bottom: 10px;}}
+        &:not(:last-child) {margin-bottom: 10px;}
+    }
     @include desktop {
         &:not(:last-child) {
             margin-right: 30px;

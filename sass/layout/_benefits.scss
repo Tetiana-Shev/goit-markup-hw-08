@@ -43,5 +43,8 @@
         @include mobile {
             text-align: center;
         }
+        @include tablet {
+            text-align: start;
+        }
     }
 }
