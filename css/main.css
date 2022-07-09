@@ -808,6 +808,7 @@ body {
 
 .hero-thumb__title {
   display: inline-block;
+  width: 360px;
   margin-top: 0;
   margin-bottom: 30px;
   color: #FFFFFF;
